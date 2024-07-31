@@ -1,0 +1,18 @@
+version: '3'
+services:
+  development:
+    build:
+      context: .
+      dockerfile: DockerFile
+    working_dir: /usr/src/app
+    env_file:
+      - .env
+    environment:
+      - PORT=${X_DONATE_PORT}
+    ports:
+      - "${X_DONATE_PORT}:${X_DONATE_PORT}"
+    volumes:
+      - ./src:/usr/src/app/src
+      - ./package.json:/usr/src/app/package.json
+    command:
+      - bash -c "npm run install && npm run start:dev"
