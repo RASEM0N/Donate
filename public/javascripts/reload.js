@@ -1,0 +1,1 @@
+setTimeout(() => document.location = document.location.href.split('?')[0] + '?' + Math.random(), 15000)

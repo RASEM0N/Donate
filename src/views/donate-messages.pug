@@ -1,0 +1,7 @@
+extends ./layouts/main.pug
+
+
+block content
+  h1 #{title}
+  each m in messages
+    p= m.message

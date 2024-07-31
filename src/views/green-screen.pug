@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/javascripts/reload.js')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+  body.greenscreen
+  - if (typeof message !== 'undefined' && message !== '') {
+    div.message-body
+      p 🔥🔥🔥 #{message}
+  - }
+    

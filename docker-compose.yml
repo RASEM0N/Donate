@@ -13,6 +13,7 @@ services:
       - "${X_DONATE_PORT}:${X_DONATE_PORT}"
     volumes:
       - ./src:/usr/src/app/src
+      - ./public:/usr/src/app/public
       - ./package.json:/usr/src/app/package.json
     command:
       - bash -c "npm run install && npm run start:dev"

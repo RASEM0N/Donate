@@ -1,0 +1,15 @@
+extends ./layouts/main.pug
+
+block content
+  div.welcome
+    h1= title
+    p Здесь можно помочь развитию RASEM0n-у
+    p Вы можете оставить свое пожелание или вопрос в форме справа.
+
+
+  div.donate
+    div.container
+      form(class="form" method="POST" action="/donate/")
+        textarea(name="comment" class="form-text form__field " required)
+        div
+          button(type="submit", class="btn btn--primary uppercase") Donate

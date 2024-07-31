@@ -1,0 +1,20 @@
+extends ./layouts/main.pug
+
+block content
+    h1 Переход к оплате
+    p
+    |   Перевод денег осуществляется в рублях через платежную систему Яндекс.Деньги, укажите сумму и нажмите кнопку "Donate"
+    div.container
+        form(class="form", method='POST', action=yadPayUrl)
+            input(type="hidden", name="receiver" value="410012773542614")
+            input(type="hidden", name="label", value=donateId)
+            input(type="hidden", name="quickpay-form", value="donate")
+            input(type="hidden", name="need-fio" value="false")
+            input(type="hidden", name="need-email" value="false")
+            input(type="hidden", name="need-phone" value="false")
+            input(type="hidden", name="need-address" value="false")
+            input(type="hidden", name="paymentType" value="AC")
+            input(type="hidden", name="successUrl" value="http://localhost:3000/payservice/thanks/" + donateId)
+            input(type="hidden", name="targets", value="Пожертвование на YouTube канал S0ER")
+            input(type="number", class="form__field", name="sum", min="50", step="5", value="100", data-type="number")
+            input(type="submit" class="btn btn--primary btn--inside uppercase", value="Donate (₽)")
