@@ -1,4 +1,7 @@
 import { Module } from '@nestjs/common';
+import { CreateDonateHandler } from './commands/handler/create-donate.handler';
 
-@Module({})
+@Module({
+  providers: [CreateDonateHandler],
+})
 export class DonateModule {}
