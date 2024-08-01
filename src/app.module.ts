@@ -3,7 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { DonateModule } from './modules/donate/donate.module';
 import { MessagesModule } from './modules/messages/messages.module';
-import { PayServiceModule } from './modules/payService/payservice.module';
+import { PayServiceModule } from './modules/pay-service/pay-service.module';
 import { DbModule } from './core/db/db.module';
 import { ConfigModule } from '@nestjs/config';
 
