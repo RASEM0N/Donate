@@ -5,21 +5,21 @@ import { DonatePayEvent } from '../events/donate-pay.event';
 
 @Controller('payservice/yandex')
 export class YandexPayController {
-  constructor(private readonly eventBus: EventBus) {}
+	constructor(private readonly eventBus: EventBus) {}
 
-  @Get(':donateId')
-  @Render('yandex_pay')
-  yandexPay(@Param('donateId') donateId: string) {
-    return {
-      donateId,
-    };
-  }
+	@Get(':donateId')
+	@Render('yandex_pay')
+	yandexPay(@Param('donateId') donateId: string) {
+		return {
+			donateId,
+		};
+	}
 
-  @Post('secret')
-  @Render('confirm')
-  secret(@Body() pay: YandexPayDto) {
-    // це реактивность
-    this.eventBus.publish(new DonatePayEvent(pay.label));
-    return { commentId: pay.label };
-  }
+	@Post('secret')
+	@Render('confirm')
+	secret(@Body() pay: YandexPayDto) {
+		// це реактивность
+		this.eventBus.publish(new DonatePayEvent(pay.label));
+		return { commentId: pay.label };
+	}
 }

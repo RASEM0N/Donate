@@ -1,3 +1,3 @@
 export class DonatePayEvent {
-  constructor(public readonly label: string) {}
+	constructor(public readonly label: string) {}
 }

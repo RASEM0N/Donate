@@ -9,18 +9,18 @@ import { MessagesModule } from '@/modules/messages/messages.module';
 import { PayServiceModule } from '@/modules/pay-service/pay-service.module';
 
 @Module({
-  imports: [
-    ConfigModule.forRoot({
-      isGlobal: true,
-      envFilePath: '.env',
-    }),
-    DbModule,
-    DonateSagaModule,
-    DonateModule,
-    MessagesModule,
-    PayServiceModule,
-  ],
-  controllers: [AppController],
-  providers: [AppService],
+	imports: [
+		ConfigModule.forRoot({
+			isGlobal: true,
+			envFilePath: '.env',
+		}),
+		DbModule,
+		DonateSagaModule,
+		DonateModule,
+		MessagesModule,
+		PayServiceModule,
+	],
+	controllers: [AppController],
+	providers: [AppService],
 })
 export class AppModule {}

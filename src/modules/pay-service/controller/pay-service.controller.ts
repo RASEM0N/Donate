@@ -3,11 +3,11 @@ import { EventBus } from '@nestjs/cqrs';
 
 @Controller('payservice')
 export class PayServiceController {
-  constructor(private readonly eventBus: EventBus) {}
+	constructor(private readonly eventBus: EventBus) {}
 
-  @Get('thanks/:id')
-  @Render('thanks')
-  thanks(@Param('id') id: number) {
-    return { id };
-  }
+	@Get('thanks/:id')
+	@Render('thanks')
+	thanks(@Param('id') id: number) {
+		return { id };
+	}
 }

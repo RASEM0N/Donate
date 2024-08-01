@@ -6,14 +6,14 @@ import { Message } from './model/message.entity';
 import { MessagesService } from './api/messages.service';
 
 @Module({
-  controllers: [MessageController],
-  providers: [
-    CreateMessageHandler,
-    MessagesService,
-    {
-      provide: PROVIDERS.repositories.message,
-      useValue: Message,
-    },
-  ],
+	controllers: [MessageController],
+	providers: [
+		CreateMessageHandler,
+		MessagesService,
+		{
+			provide: PROVIDERS.repositories.message,
+			useValue: Message,
+		},
+	],
 })
 export class MessagesModule {}

@@ -6,19 +6,19 @@ import { Sequelize } from 'sequelize-typescript';
 import { Message } from '@/modules/messages/model/message.entity';
 
 export const providers: Provider[] = [
-  {
-    provide: PROVIDERS.db,
-    inject: [ConfigModule],
-    useFactory: async (configService: ConfigService): Promise<Sequelize> => {
-      const sequelize = new Sequelize(config(configService));
-      sequelize.addModels([Message]);
+	{
+		provide: PROVIDERS.db,
+		inject: [ConfigModule],
+		useFactory: async (configService: ConfigService): Promise<Sequelize> => {
+			const sequelize = new Sequelize(config(configService));
+			sequelize.addModels([Message]);
 
-      await sequelize
-        .sync()
-        .then(() => console.log(`connected to DB`))
-        .catch((e) => console.error(e));
+			await sequelize
+				.sync()
+				.then(() => console.log(`connected to DB`))
+				.catch((e) => console.error(e));
 
-      return sequelize;
-    },
-  },
+			return sequelize;
+		},
+	},
 ];

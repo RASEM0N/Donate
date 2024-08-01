@@ -5,20 +5,20 @@ import { MessageDto } from '../model/message.dto';
 
 @Injectable()
 export class MessagesService {
-  constructor(
-    @Inject(PROVIDERS.repositories.message)
-    private readonly messageRepository: typeof Message,
-  ) {}
+	constructor(
+		@Inject(PROVIDERS.repositories.message)
+		private readonly messageRepository: typeof Message,
+	) {}
 
-  pop(): Promise<Message> {
-    return this.messageRepository.findOne({
-      limit: 1,
-      where: {},
-      order: [['createdAt', 'DESC']],
-    });
-  }
+	pop(): Promise<Message> {
+		return this.messageRepository.findOne({
+			limit: 1,
+			where: {},
+			order: [['createdAt', 'DESC']],
+		});
+	}
 
-  create(dto: MessageDto): Promise<Message> {
-    return this.messageRepository.create({ message: dto.message });
-  }
+	create(dto: MessageDto): Promise<Message> {
+		return this.messageRepository.create({ message: dto.message });
+	}
 }

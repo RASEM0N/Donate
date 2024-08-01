@@ -7,17 +7,17 @@ import { CreateMessageCommand } from '@/modules/messages/commands/impl/create-me
 
 @Injectable()
 export class CreateMessageSaga {
-  @Saga()
-  sendMessage(events$: Observable<any>): Observable<ICommand> {
-    return events$.pipe(
-      // берем только события DonatePayEvent
-      ofType(DonatePayEvent),
+	@Saga()
+	sendMessage(events$: Observable<any>): Observable<ICommand> {
+		return events$.pipe(
+			// берем только события DonatePayEvent
+			ofType(DonatePayEvent),
 
-      // и только после этого отправляем команды
-      mergeMap((event: DonatePayEvent) => [
-        new CreateDonateCommand(`[SAGA] ${event.label}`),
-        new CreateMessageCommand(`[SAGA] ${event.label}`),
-      ]),
-    );
-  }
+			// и только после этого отправляем команды
+			mergeMap((event: DonatePayEvent) => [
+				new CreateDonateCommand(`[SAGA] ${event.label}`),
+				new CreateMessageCommand(`[SAGA] ${event.label}`),
+			]),
+		);
+	}
 }
