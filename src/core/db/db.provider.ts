@@ -4,6 +4,7 @@ import { PROVIDERS } from '../constants';
 import { config } from './db.config';
 import { Sequelize } from 'sequelize-typescript';
 import { Message } from '@/modules/messages/model/message.entity';
+import { Donate } from '@/modules/donate/model/donate.entity';
 
 export const providers: Provider[] = [
 	{
@@ -11,7 +12,7 @@ export const providers: Provider[] = [
 		inject: [ConfigModule],
 		useFactory: async (configService: ConfigService): Promise<Sequelize> => {
 			const sequelize = new Sequelize(config(configService));
-			sequelize.addModels([Message]);
+			sequelize.addModels([Message, Donate]);
 
 			await sequelize
 				.sync()

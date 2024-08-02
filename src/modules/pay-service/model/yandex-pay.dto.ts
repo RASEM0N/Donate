@@ -1,3 +1,1 @@
-export class YandexPayDto {
-	constructor(public readonly label: string) {}
-}
+export class YandexPayDto {}

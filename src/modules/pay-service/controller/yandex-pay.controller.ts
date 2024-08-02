@@ -1,11 +1,14 @@
 import { Body, Controller, Get, Param, Post, Render } from '@nestjs/common';
 import { EventBus } from '@nestjs/cqrs';
-import { YandexPayDto } from '../model/yandex-pay.dto';
-import { DonatePayEvent } from '../events/donate-pay.event';
+import { YandexPayService } from '@/modules/pay-service/api/yandex-pay.service';
+import { IYandexPay } from '../model/yandex-pay.interface';
 
 @Controller('payservice/yandex')
 export class YandexPayController {
-	constructor(private readonly eventBus: EventBus) {}
+	constructor(
+		private readonly eventBus: EventBus,
+		private readonly yandexPayService: YandexPayService,
+	) {}
 
 	@Get(':donateId')
 	@Render('yandex_pay')
@@ -17,9 +20,13 @@ export class YandexPayController {
 
 	@Post('secret')
 	@Render('confirm')
-	secret(@Body() pay: YandexPayDto) {
-		// це реактивность
-		this.eventBus.publish(new DonatePayEvent(pay.label));
+	secret(@Body() pay: IYandexPay) {
+		const donate = this.yandexPayService.convertPayObjectToDonateEvent(pay);
+
+		if (donate.sha1_hash) {
+			this.eventBus.publish(donate);
+		}
+
 		return { commentId: pay.label };
 	}
 }
