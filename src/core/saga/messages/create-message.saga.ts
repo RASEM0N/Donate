@@ -10,7 +10,10 @@ export class CreateMessageSaga {
 	sendMessage(events$: Observable<any>): Observable<ICommand> {
 		return events$.pipe(
 			ofType(DonateCommitEvent),
-			map((event: DonateCommitEvent) => new CreateMessageCommand(`[SAGA] ${event}`)),
+			map(
+				(event: DonateCommitEvent) =>
+					new CreateMessageCommand(`${event.donater} ${event.amount} ${event.comment}`),
+			),
 		);
 	}
 }

@@ -5,7 +5,7 @@ import { DonatePayEvent } from '@/core/events/donate-pay.event';
 import { CommitDonateCommand } from '@/modules/donate/commands/impl/commit-donate.command';
 
 @Injectable()
-export class CommitMessageSaga {
+export class CommitDonateSaga {
 	@Saga()
 	commitDonate(event$: Observable<any>): Observable<ICommand> {
 		return event$.pipe(
