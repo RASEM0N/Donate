@@ -6,7 +6,6 @@ export const PROVIDERS = {
 	},
 };
 
-
 export const WITHOUT_ACTION = 0;
 export const WITH_ACTION = 1;
 export const PERFORM_ACTION = 2;

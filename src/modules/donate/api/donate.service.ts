@@ -4,7 +4,9 @@ import { Donate } from '@/modules/donate/model/donate.entity';
 
 @Injectable()
 export class DonateService {
-	constructor(@Inject(PROVIDERS.repositories.donate) private readonly donateRepository: typeof Donate) {}
+	constructor(
+		@Inject(PROVIDERS.repositories.donate) private readonly donateRepository: typeof Donate,
+	) {}
 
 	getAll(): Promise<Donate[]> {
 		return this.donateRepository.findAll();

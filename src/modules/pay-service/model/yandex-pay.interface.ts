@@ -1,5 +1,5 @@
 export interface IYandexPay {
-	notification_type?: string,
+	notification_type?: string;
 	label?: string;
 	operation_id?: string;
 	bill_id?: string;

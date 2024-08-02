@@ -21,7 +21,9 @@ export class YandexPayService {
 				parseFloat(pay.amount),
 				new Date(pay.datetime),
 				pay.unaccepted === 'true' ? PaymentState.in_progress : PaymentState.completed,
-				pay.codepro === 'true' ? PaymentProtection.protected : PaymentProtection.not_protected,
+				pay.codepro === 'true'
+					? PaymentProtection.protected
+					: PaymentProtection.not_protected,
 			);
 			payment.sha1_hash = this.signatureService.sha1HexSign([
 				payment.label,

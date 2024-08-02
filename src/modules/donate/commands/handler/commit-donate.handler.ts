@@ -20,7 +20,14 @@ export class CommitDonateHandler implements ICommandHandler<CommitDonateCommand>
 		await this.donateService.commit(donate, command.donate.amount);
 
 		this.eventBus.publish(
-			new DonateCommitEvent(donate.donater, donate.email, donate.amount, donate.comment, donate.done, 'done'),
+			new DonateCommitEvent(
+				donate.donater,
+				donate.email,
+				donate.amount,
+				donate.comment,
+				donate.done,
+				'done',
+			),
 		);
 	}
 }
