@@ -1,0 +1,102 @@
+<mxfile host="app.diagrams.net" modified="2024-08-02T14:47:21.587Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 YaBrowser/24.6.0.0 Safari/537.36" etag="dYrH1hFKmFrcpuMKpV55" version="24.0.1" type="device">
+  <diagram name="Страница — 1" id="yGpH3wixuPHqKcdAv44J">
+    <mxGraphModel dx="2129" dy="699" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5Ah4fk_ojZLUud_CtWHC-1" target="5Ah4fk_ojZLUud_CtWHC-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-1" value="Pay processing..." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="160" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.002;entryY=0.6;entryDx=0;entryDy=0;exitX=0.41;exitY=0.988;exitDx=0;exitDy=0;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="289.20000000000005" y="206.5200000000001" as="sourcePoint" />
+            <mxPoint x="353.76" y="376" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="289" y="376" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5Ah4fk_ojZLUud_CtWHC-2" target="5Ah4fk_ojZLUud_CtWHC-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-2" value="YandexPay" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="160" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.551;entryY=1.045;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="354" y="363.02857142857135" as="sourcePoint" />
+            <mxPoint x="306.1200000000001" y="204.80000000000007" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="306" y="363" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5Ah4fk_ojZLUud_CtWHC-4" target="5Ah4fk_ojZLUud_CtWHC-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-4" value="YandexPayService" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="354" y="350" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-6" value="&lt;b&gt;POST&amp;nbsp; &amp;nbsp;/&lt;/b&gt;payservice/yandex/confirm&amp;nbsp;&lt;br&gt;&lt;b&gt;BODY&amp;nbsp;&amp;nbsp;&lt;/b&gt;IYandexPay" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="220" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-10" value="&lt;b&gt;ОТВЕТ &lt;/b&gt;верстка &lt;b&gt;confirm &lt;/b&gt;экрана с айди оплаты" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="260" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-11" value="Confirm" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="400" y="160" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5Ah4fk_ojZLUud_CtWHC-13" target="5Ah4fk_ojZLUud_CtWHC-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-13" value="&lt;b&gt;PUB&amp;nbsp;&lt;/b&gt;DonatePayEvent" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="520" y="350" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-15" value="валидация платежа через YANDEX_SECRET&amp;nbsp;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="310" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5Ah4fk_ojZLUud_CtWHC-16" target="5Ah4fk_ojZLUud_CtWHC-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-16" value="&lt;b&gt;Handler &lt;/b&gt;CommitDonateCommand" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="690" y="350" width="166" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5Ah4fk_ojZLUud_CtWHC-23" target="5Ah4fk_ojZLUud_CtWHC-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-23" value="&lt;b&gt;PUB &lt;/b&gt;DonateCommitEvent" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="690" y="430" width="166" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5Ah4fk_ojZLUud_CtWHC-25" target="5Ah4fk_ojZLUud_CtWHC-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-25" value="DonateController" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="80" y="160" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-29" value="&lt;b&gt;POST&amp;nbsp; &amp;nbsp;&lt;/b&gt;/donate&lt;div&gt;&lt;b&gt;BODY&amp;nbsp;&amp;nbsp;&lt;/b&gt;DonateDto&lt;br&gt;&lt;br&gt;создаем пустой платеж и Редиректим на оплату&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="210" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-31" value="подтверждаем платеж в БД" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="690" y="310" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-33" value="&lt;b&gt;Handler&amp;nbsp;&lt;br&gt;&lt;/b&gt;CreateMessageCommand" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="690" y="510" width="166" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-35" value="Создаем сообщение для показа в View" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="510" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-37" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="340" width="390" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="5Ah4fk_ojZLUud_CtWHC-38" value="&lt;b&gt;РЕАКТИВНОСТЬ&lt;/b&gt;&amp;nbsp;&lt;br&gt;описано поверхностно" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="430" width="148" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
