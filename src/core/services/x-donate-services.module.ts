@@ -5,4 +5,4 @@ import { SignatureService } from './signature/signature.service';
 	providers: [SignatureService],
 	imports: [SignatureService],
 })
-export class XDonateCoreModule {}
+export class XDonateServicesModule {}

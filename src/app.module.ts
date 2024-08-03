@@ -7,7 +7,7 @@ import { DonateSagaModule } from '@/core/saga/donate-saga.module';
 import { DonateModule } from '@/modules/donate/donate.module';
 import { MessagesModule } from '@/modules/messages/messages.module';
 import { PayServiceModule } from '@/modules/pay-service/pay-service.module';
-import { XDonateCoreModule } from '@/core/services/x-donate-core.module';
+import { XDonateServicesModule } from '@/core/services/x-donate-services.module';
 
 @Module({
 	imports: [
@@ -17,7 +17,7 @@ import { XDonateCoreModule } from '@/core/services/x-donate-core.module';
 		}),
 		DbModule,
 		DonateSagaModule,
-		XDonateCoreModule,
+		XDonateServicesModule,
 		DonateModule,
 		MessagesModule,
 		PayServiceModule,
