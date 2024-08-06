@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { IYandexPay } from '../model/yandex-pay.interface';
 import { SignatureService } from '@/core/services/signature/signature.service';
-import { DonatePayEvent, PaymentState, PaymentProtection } from '@/core/events/donate-pay.event';
+import { DonatePayEvent, PaymentProtection, PaymentState } from '@xdonate/common';
 
 @Injectable()
 export class YandexPayService {

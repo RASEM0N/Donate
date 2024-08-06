@@ -1,7 +1,7 @@
 import { CommandHandler, EventBus, ICommandHandler } from '@nestjs/cqrs';
 import { CommitDonateCommand } from '../impl/commit-donate.command';
 import { DonateService } from '../../api/donate.service';
-import { DonateCommitEvent } from '@/core/events/donate-pay.event';
+import { DonateCommitEvent } from '@xdonate/common';
 
 @CommandHandler(CommitDonateCommand)
 export class CommitDonateHandler implements ICommandHandler<CommitDonateCommand> {
