@@ -1,17 +1,11 @@
 import { Injectable } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
 import { IYandexPay } from '../model/yandex-pay.interface';
-import { SignatureService } from '@/core/services/signature/signature.service';
 import { DonatePayEvent, PaymentProtection, PaymentState } from '@xdonate/common';
+import { PayService } from '@/modules/pay-service/api/pay-service.service';
 
 @Injectable()
-export class YandexPayService {
-	constructor(
-		private readonly configService: ConfigService,
-		private readonly signatureService: SignatureService,
-	) {}
-
-	convertPayObjectToDonateEvent(pay: IYandexPay): DonatePayEvent {
+export class YandexPayService extends PayService {
+	override convertPayObjectToDonateEvent(pay: IYandexPay): DonatePayEvent {
 		if (this.isValidPayment(pay)) {
 			const payment = new DonatePayEvent(
 				pay.label,
