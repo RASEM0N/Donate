@@ -7,7 +7,7 @@ https://platform.soer.pro/#!/pages/workshops/kinescope/813157cf-0c0f-4b00-b7d1-b
 ### App
 
 **Вопросы**
-- Неоднародность в Core: к events, constants, services... идет доступ извне.
+- `Неоднародность` в Core: к events, constants, services... идет доступ извне.
 ![img.png](img.png)
 
 #### Решение
