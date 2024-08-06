@@ -10,6 +10,10 @@ https://platform.soer.pro/#!/pages/workshops/kinescope/813157cf-0c0f-4b00-b7d1-b
 - Неоднародность в Core: к events, constants, services... идет доступ извне.
 ![img.png](img.png)
 
+#### Решение
+- вынесли events в библиотеку @xdonate/common;
+- разнесли взаимодействие саги с модулями по модулям:
+
 ### PayService
 Используются сокращения:
 - DP - DonatPayEvent;
