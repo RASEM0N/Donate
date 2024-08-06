@@ -3,7 +3,6 @@ import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { DbModule } from '@/core/db/db.module';
-import { DonateSagaModule } from '@/core/saga/donate-saga.module';
 import { DonateModule } from '@/modules/donate/donate.module';
 import { MessagesModule } from '@/modules/messages/messages.module';
 import { PayServiceModule } from '@/modules/pay-service/pay-service.module';
@@ -16,7 +15,6 @@ import { XDonateServicesModule } from '@/core/services/x-donate-services.module'
 			envFilePath: '.env',
 		}),
 		DbModule,
-		DonateSagaModule,
 		XDonateServicesModule,
 		DonateModule,
 		MessagesModule,

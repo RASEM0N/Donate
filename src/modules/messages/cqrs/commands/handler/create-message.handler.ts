@@ -1,6 +1,6 @@
 import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
 import { CreateMessageCommand } from '../impl/create-message.command';
-import { MessagesService } from '../../api/messages.service';
+import { MessagesService } from '../../../api/messages.service';
 
 @CommandHandler(CreateMessageCommand)
 export class CreateMessageHandler implements ICommandHandler<CreateMessageCommand> {

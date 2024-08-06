@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { ICommand, ofType, Saga } from '@nestjs/cqrs';
 import { map, Observable } from 'rxjs';
-import { CommitDonateCommand } from '@/modules/donate/commands/impl/commit-donate.command';
+import { CommitDonateCommand } from '@/modules/donate/cqrs/commands/impl/commit-donate.command';
 import { DonatePayEvent } from '@xdonate/common';
 
 @Injectable()
